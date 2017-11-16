@@ -14,7 +14,12 @@ public class VideoService {
     private VideoDao videoDao;
 
     public Collection<Video> getAllVideos () {
-        return videoDao.getAllVideos();
+        return this.videoDao.getAllVideos();
+    }
+
+    public Video getVideoById (int id) {
+        System.out.println("VideoService: getVideoById called, ID IS "+id);
+        return this.videoDao.getVideoById(id);
     }
 
 }
