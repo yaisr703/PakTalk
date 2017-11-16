@@ -36,4 +36,16 @@ public class VideoDao {
     public void removeVideoById(int id) {
         this.videos.remove(id);
     }
+
+    public void updateVideo(Video video){
+        System.out.println("VideoDao: UpdateVideo called, video Object IS "+video);
+
+        Video v = videos.get(Integer.valueOf(video.getId()));
+        v.setTitle(video.getTitle());
+        v.setType(video.getType());
+        v.setHostSource(video.getHostSource());
+        v.setUrl(video.getUrl());
+
+        videos.put(Integer.valueOf(video.getId()), video);
+    }
 }

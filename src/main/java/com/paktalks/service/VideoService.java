@@ -26,4 +26,9 @@ public class VideoService {
         //check if stodent exists
         this.videoDao.removeVideoById(id);
     }
+
+    public void updateVideo(Video video){
+        videoDao.updateVideo(video);
+    }
+
 }
