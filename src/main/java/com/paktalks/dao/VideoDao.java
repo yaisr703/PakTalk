@@ -33,4 +33,7 @@ public class VideoDao {
         return this.videos.get(id);
     }
 
+    public void removeVideoById(int id) {
+        this.videos.remove(id);
+    }
 }

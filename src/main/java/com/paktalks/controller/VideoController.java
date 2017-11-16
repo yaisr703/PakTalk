@@ -33,5 +33,9 @@ public class VideoController {
         return this.videoService.getVideoById(id);
 
     }
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public void deleteVideoById(@PathVariable("id") int id){
+        videoService.removeVideoById(id);
+    }
 
 }
